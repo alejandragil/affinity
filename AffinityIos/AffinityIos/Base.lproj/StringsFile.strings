@@ -1,0 +1,101 @@
+/*
+ StringsFile.strings
+ AffinityIos
+ 
+ Created by Alejandra Gil Calderon on 17/3/17.
+ Copyright © 2017 FlechaRojaTechnologies. All rights reserved.
+
+
+"app_name" = "Affinity";
+"param_username" = "Username";
+"param_password" = "Password";
+"send_request" = "Send Request";
+"sign_in" = "Sign In";
+"enter_your_credentials" = "Enter Your Credentials";
+"username_cannot_be_empty" = "Username cannot be empty";
+"password_cannot_be_empty" = "Password cannot be empty";
+"action_params" = "Params";
+"your_offers" = "Your Offers";
+"go_to_offer" = "Go to Offer;
+"payout" = "Payout";
+"payout_amount" = "Payout Amount";
+"offer_types" = "Offer Types";
+"an_error_has_occurred_while_signing_in" = "An error has occurred while signing in. Please, make sure you have Internet connection enabled.";
+"balance" = "Balance";
+"total" = "Total";
+"news" = "News";
+"challenges" = "Challenges";
+"rewards" = "Rewards";
+"redeemed" = "Redeemed";
+"shopping" = "Shopping";
+"scan_code" = "Scan Code";
+"stores" = "Stores";
+"read_more" = "Read More";
+"profile" = "Profile";
+"drawer_open" = "Open";
+"drawer_close" = "Close";
+"promotion" = "Promotion";
+"settings" = "Settings";
+"invalid_url" = "Invalid URL: %1$s";
+"no_stores_found" = "No Stores Found";
+"no_rewards_found" = "No Rewards Found";
+"redeem_reward" = "Redeem Reward";
+"redeem" = "Redeem";
+"reward_redeemed_successfully" = "Reward redeemed successfully";
+"challenge_submitted_successfully" = "Challenge submitted successfully";
+"no_products_found" = "No Products Found";
+"name" = "Name";
+"firstname" = "Firstname";
+"lastname" = "Lastname";
+"second_lastname" = "Second Lastname";
+"email" = "Email";
+"address" = "Address";
+"city" = "City";
+"state" = "State";
+"country" = "Country";
+"zipCode" = "Zip Code";
+"mobile" = "Mobile";
+"save" = "Save";
+"profile_saved_successfully" = "Profile saved successfully";
+"error_saving_profile_x" = "Error saving profile: %1$s";
+"receive_email_notifications" = "Receive email notifications";
+"receive_sms_notifications" = "Receive SMS notifications";
+"receive_phone_notifications" = "Receive phone notifications";
+"no_challenges_found" = "No Challenges Found";
+"survey" = "Survey";
+"see_content" = "See Content";
+"update_profile" = "Update Profile";
+"type_certificate" = "Certificate";
+"type_product" = "Product";
+"submit" = "Submit";
+"sign_out" = "Sign Out";
+"birth_date" = "Birth Date";
+"gender" = "Gender";
+"male" = "Male";
+"female" = "Female";
+"po_box" = "PO Box";
+"marriage_status" = "Marriage Status";
+"married" = "Married";
+"single" = "Single";
+"open_union" = "Open Union";
+"na" = "N/A";
+"education" = "Education";
+"primary" = "Primary";
+"secondary" = "Secondary";
+"technical" = "Technical";
+"university" = "University";
+"grade" = "Grade";
+"post_grade" = "Post Grade";
+"master" = "Master";
+"doctor" = "Doctor";
+"income" = "Income";
+"yes" = "Yes";
+"no" = "No";
+"have_child" = "Have Child";
+"cannot_get_badges" = "Cannot get badges";
+"cannot_get_points" = "Cannot get points";
+"progress" = "Progress";
+"you" = "You";
+"level" = "Level";
+
+*/
