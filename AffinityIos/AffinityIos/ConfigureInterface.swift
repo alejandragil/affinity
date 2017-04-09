@@ -34,6 +34,7 @@ class ConfigureInterface{
         return buttonConnect
     }
 
+
     public func generateButtonImage(x:Int, y:Int, width:Int, height:Int, colorBackground:UIColor, colorBorder:UIColor, tittle:String, tag:Int)->UIButton{
         let buttonConnect = UIButton(frame: CGRect(x:x, y:y, width:width, height:height))
         //buttonConnect.layer.cornerRadius = 0.5 * buttonConnect.bounds.size.width
@@ -106,22 +107,14 @@ class ConfigureInterface{
         return imageView
     }
 
-    func convertImageToBW(image:UIImage) -> UIImage {
-        
-        let filter = CIFilter(name: "CIPhotoEffectMono")
-        
-        // convert UIImage to CIImage and set as input
-        
-        let ciInput = CIImage(image: image)
-        filter?.setValue(ciInput, forKey: "inputImage")
-        
-        // get output CIImage, render as CGImage first to retain proper UIImage scale
-        
-        let ciOutput = filter?.outputImage
-        let ciContext = CIContext()
-        let cgImage = ciContext.createCGImage(ciOutput!, from: (ciOutput?.extent)!)
-        
-        return UIImage(cgImage: cgImage!)
+    func convertImageToBW(originalImage:UIImage) -> UIImage {
+        let currentFilter = CIFilter(name: "CIPhotoEffectNoir")
+        let context = CIContext(options: nil)
+        currentFilter!.setValue(CIImage(image: originalImage), forKey: kCIInputImageKey)
+        let output = currentFilter!.outputImage
+        let cgimg = context.createCGImage(output!,from: output!.extent)
+        let processedImage = UIImage(cgImage: cgimg!)
+        return processedImage
     }
     
     //Genera DatePicker
@@ -148,4 +141,10 @@ class ConfigureInterface{
         return buttonConnect
     }
     
+    public func uiPickerView(x:Int, y:Int, width:Int, height:Int, colorBackground:UIColor, colorBorder:UIColor, tittle:String, tag:Int)->UIPickerView{
+        let picker = UIPickerView()
+        picker.frame = CGRect(x: x, y: y, width: width, height: height)
+        picker.backgroundColor = colorBackground
+        return picker
+    }
 }

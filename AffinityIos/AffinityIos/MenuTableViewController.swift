@@ -12,9 +12,10 @@ class MenuTableViewController: UIViewController, UITableViewDelegate, UITableVie
 
     @IBOutlet weak var tableView: UITableView!
     
-    let names = ["Promotion", "News", "Challenges", "Rewards", "Shopping",
+    let names = ["Profile", "News", "Challenges", "Rewards", "Shopping",
                  "Stores", "Scan Code", "Settings", "Sign Out"]
     
+    @IBOutlet weak var profileImage: UIImageView!
     let viewControllersName = ["HomeViewController","NewsViewController", "ChallengesViewController", "RewardsViewController", "ShoppingViewController",
                                "StoresViewController", "ScanCodeViewController", "SettingsViewController", "Sign Out"]
     
@@ -23,7 +24,11 @@ class MenuTableViewController: UIViewController, UITableViewDelegate, UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let userDefaults = UserDefaults.standard
+        let paramToken:String = userDefaults.string(forKey: "avatar")!
+        profileImage.af_setImage(withURL: NSURL(string: paramToken) as! URL)
+        profileImage.layer.cornerRadius = 0.5 * profileImage.bounds.size.width
+        profileImage.clipsToBounds = true
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -35,6 +40,22 @@ class MenuTableViewController: UIViewController, UITableViewDelegate, UITableVie
         tableView.dataSource = self
         tableView.delegate = self
         //self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        assignbackground()
+    }
+    
+    func assignbackground(){
+        let background = UIImage(named: "Gradient_Blue")
+        
+        var imageView : UIImageView!
+        imageView = UIImageView(frame: view.bounds)
+        imageView.contentMode =  UIViewContentMode.scaleAspectFill
+        imageView.clipsToBounds = true
+        imageView.image = background
+        imageView.center = view.center
+        view.addSubview(imageView)
+        tableView.backgroundColor = UIColor(white: 1, alpha: 0.3)
+        self.view.sendSubview(toBack: imageView)
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -47,13 +68,16 @@ class MenuTableViewController: UIViewController, UITableViewDelegate, UITableVie
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return names.count
-    }
+        }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")! as! TableViewCell
         cell.iconText?.text = names[indexPath.row]
-        cell.icon.image = UIImage(named: names[indexPath.row])
+        //cell.icon.image = UIImage(named: names[indexPath.row])
         row = indexPath.row
+        cell.backgroundColor = UIColor.clear
+        // cell.backgroundColor = UIColor(white: 1, alpha: 0.5)
+
         return cell
     }
     
@@ -65,7 +89,7 @@ class MenuTableViewController: UIViewController, UITableViewDelegate, UITableVie
 
     func valideController(row:Int){
         if(row == 0){
-            let mainNavigationController = self.storyboard?.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+            let mainNavigationController = self.storyboard?.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
             self.present(mainNavigationController, animated: true, completion: nil)        }
         else
          if(row == 1){
@@ -83,8 +107,9 @@ class MenuTableViewController: UIViewController, UITableViewDelegate, UITableVie
          }
          else
          if(row == 4){
-            let mainNavigationController = self.storyboard?.instantiateViewController(withIdentifier: "ShoppingViewController") as! ShoppingViewController
+           /* let mainNavigationController = self.storyboard?.instantiateViewController(withIdentifier: "ShoppingViewController") as! ShoppingViewController
             self.present(mainNavigationController, animated: true, completion: nil)
+             */
          }
          else
           if(row == 5){
@@ -108,51 +133,5 @@ class MenuTableViewController: UIViewController, UITableViewDelegate, UITableVie
             self.present(viewController, animated: false, completion: nil)
         }
     }
-    
    
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

@@ -19,6 +19,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Branch.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>CryptoSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>FBSDKCoreKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -132,6 +142,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>239E1640346BFB9DBF521D5D48CCA96D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>322428ECC8C5EC71F14C92233787C7AC</key>
 		<dict>
 			<key>primary</key>
@@ -142,7 +157,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>43B72BDDED64D90F18E2C5B348EFA52C</key>
+		<key>3D8B997872BE0EB8C6BC84113D6B19FE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -177,17 +192,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>6BB1C1403B2419F911818DA8413FDA07</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>7335E9C9689F3B8A16F063A884748533</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>85419C056E70A360A864827B2DB54A1B</key>
+		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
+		<key>99CF1327D4BB03324C74A5440065DF54</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -202,12 +222,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B1C4AAFAF49036C7007633DAA3C806AD</key>
+		<key>AF894E187E32385A1875EC68C3E5F4A3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B8F12C595FB6EA7C383D170DADC7BDC5</key>
+		<key>B1C4AAFAF49036C7007633DAA3C806AD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -217,7 +237,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E385486D97251EBF29BA77F177A6797F</key>
+		<key>F53E21552F7D8307D3DA77BD27B369ED</key>
 		<dict>
 			<key>primary</key>
 			<true/>

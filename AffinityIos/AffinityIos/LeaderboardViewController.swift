@@ -27,7 +27,8 @@ class LeaderboardViewController: UIViewController , UITableViewDelegate, UITable
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //profileImage = configureInterface.generateImageViewUrlCircle(x: 0, y: 0, width: 100, height: 100, url: leaderboard.image)
+        tableView.center = CGPoint(x: view.bounds.midX, y: tableView.center.y)
+        tableView.autoresizingMask = [UIViewAutoresizing.flexibleLeftMargin, UIViewAutoresizing.flexibleRightMargin, UIViewAutoresizing.flexibleTopMargin, UIViewAutoresizing.flexibleBottomMargin]
         profileImage.center = CGPoint(x: view.bounds.midX, y: profileImage.center.y)
         gradientIma.center = CGPoint(x: view.bounds.midX, y: profileImage.center.y)
         textPro.center = CGPoint(x: view.bounds.midX, y: textPro.center.y)
@@ -35,15 +36,31 @@ class LeaderboardViewController: UIViewController , UITableViewDelegate, UITable
         itemView.center = CGPoint(x: view.bounds.midX, y: view.bounds.maxY)
         itemView.autoresizingMask = [UIViewAutoresizing.flexibleLeftMargin, UIViewAutoresizing.flexibleRightMargin, UIViewAutoresizing.flexibleTopMargin, UIViewAutoresizing.flexibleBottomMargin]
 
-        let buttonConnect1 = configureInterface.generateButtonImage(x: 10, y: 20, width: 20, height: 20, colorBackground: color, colorBorder: color, tittle: "", tag: 300)
+        let buttonConnect1 = configureInterface.generateButtonImage(x: 10, y: 20, width: 20, height: 20, colorBackground: UIColor.clear, colorBorder: UIColor.clear, tittle: "", tag: 300)
         buttonConnect1.setImage(UIImage(named: "Back"), for: UIControlState.normal)
         buttonConnect1.addTarget(self, action: #selector(backAction(sender:)), for: .touchUpInside)
         view.addSubview(buttonConnect1)
         service()
-
+        assignbackground()
         // Do any additional setup after loading the view.
     }
 
+    func assignbackground(){
+        let background = UIImage(named: "Gradient_Blue")
+        
+        var imageView : UIImageView!
+        imageView = UIImageView(frame: view.bounds)
+        imageView.contentMode =  UIViewContentMode.scaleAspectFill
+        imageView.clipsToBounds = true
+        imageView.image = background
+        imageView.center = view.center
+        view.addSubview(imageView)
+        tableView.backgroundColor = UIColor(white: 1, alpha: 0.3)
+        self.view.sendSubview(toBack: imageView)
+        
+    }
+
+    
     func backAction(sender: UIButton!){
         dismiss(animated: true, completion: nil)
     }
@@ -64,7 +81,10 @@ class LeaderboardViewController: UIViewController , UITableViewDelegate, UITable
         let url:String = leaderboard.top[indexPath.row].avatar
         cell.imageProfile.af_setImage(withURL: NSURL(string: url) as! URL)
         cell.pointsProfile.text = String(leaderboard.top[indexPath.row].acumulado)+" "+metric
-        //row = indexPath.row
+        cell.backgroundColor = UIColor(white: 1, alpha: 0.3)
+        cell.imageProfile.layer.cornerRadius = 0.5 * cell.imageProfile.bounds.size.width
+        cell.imageProfile.clipsToBounds = true
+
         return cell
     }
     

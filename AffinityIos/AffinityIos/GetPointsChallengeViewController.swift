@@ -18,15 +18,29 @@ class GetPointsChallengeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let buttonConnect1 = configureInterface.generateButtonImage(x: 10, y: 20, width: 20, height: 20, colorBackground: color, colorBorder: color, tittle: "", tag: 300)
+        let buttonConnect1 = configureInterface.generateButtonImage(x: 10, y: 20, width: 20, height: 20, colorBackground: UIColor.clear, colorBorder: UIColor.clear, tittle: "", tag: 300)
         buttonConnect1.setImage(UIImage(named: "Back"), for: UIControlState.normal)
         buttonConnect1.addTarget(self, action: #selector(backAction(sender:)), for: .touchUpInside)
         view.addSubview(buttonConnect1)
         itemView.contentMode = .center
         itemView.center = CGPoint(x: view.bounds.midX, y: view.bounds.midY)
         valideType()
+        assignbackground()
     }
 
+    func assignbackground(){
+        let background = UIImage(named: "Gradient_Blue")
+        
+        var imageView : UIImageView!
+        imageView = UIImageView(frame: view.bounds)
+        imageView.contentMode =  UIViewContentMode.scaleAspectFill
+        imageView.clipsToBounds = true
+        imageView.image = background
+        imageView.center = view.center
+        view.addSubview(imageView)
+        self.view.sendSubview(toBack: imageView)
+        
+    }
     func backAction(sender: UIButton!){
         dismiss(animated: true, completion: nil)
     }
@@ -89,6 +103,11 @@ class GetPointsChallengeViewController: UIViewController {
             {
                 answerObject.tag = index
                 answerObject.type = strings.ANSWER_TYPE_SINGLE_SELECTION
+                let picker = configureInterface.uiPickerView(x: x, y: y, width: 260, height: 40, colorBackground: color, colorBorder: color, tittle: "", tag: index)
+                let pickerData = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6"]
+                
+                itemView.addSubview(picker)
+                y += 45
                 tags.append(answerObject)
             }
                 

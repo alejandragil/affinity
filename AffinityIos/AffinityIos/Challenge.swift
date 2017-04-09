@@ -19,6 +19,6 @@ class Challenge {
     var misionVerContenido = ChallengesSeeContent()
     var misionPerfilAtributos = [ChallengesProfileAttribute]()
     var misionEncuestaPreguntas = [ChallengeQuestion]()
-    //var misionRedSocial = ChallengeSocialNetwork()
+    var misionRedSocial = ChallengeSocialNetwork()
     //var misionSubirContenido = ChallengeUploadContent()
 }

@@ -24,8 +24,21 @@ class MoreBadgesViewController: UIViewController {
         itemView.contentMode = .center
         itemView.center = CGPoint(x: view.bounds.midX, y: view.bounds.midY)
         charge()
+        assignbackground()
     }
-
+    func assignbackground(){
+        let background = UIImage(named: "Gradient_Blue")
+        
+        var imageView : UIImageView!
+        imageView = UIImageView(frame: view.bounds)
+        imageView.contentMode =  UIViewContentMode.scaleAspectFill
+        imageView.clipsToBounds = true
+        imageView.image = background
+        imageView.center = view.center
+        view.addSubview(imageView)
+        self.view.sendSubview(toBack: imageView)
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

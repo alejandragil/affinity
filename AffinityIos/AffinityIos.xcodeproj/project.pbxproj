@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6037588328C60C59E3D3B622 /* Pods_AffinityIos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 425382D657DCFCAD4D48CDA2 /* Pods_AffinityIos.framework */; };
 		8A42096CE4919613AA9C093D /* Pods_AffinityIosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5361110BAE5381E641C0D0E8 /* Pods_AffinityIosTests.framework */; };
+		A76ECFDE1E98095D00DCE574 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76ECFDD1E98095D00DCE574 /* EditProfileViewController.swift */; };
 		A776974E1E87586200F5A40A /* RewardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A776974D1E87586200F5A40A /* RewardCollectionViewCell.swift */; };
 		A77697501E87587600F5A40A /* RedeemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A776974F1E87587600F5A40A /* RedeemCollectionViewCell.swift */; };
 		A77697521E87589400F5A40A /* RewardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77697511E87589400F5A40A /* RewardViewController.swift */; };
@@ -69,6 +70,8 @@
 		A794365A1E8AC22E0046FDAC /* DetailPromotionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79436591E8AC22E0046FDAC /* DetailPromotionViewController.swift */; };
 		A794365C1E8ADF7C0046FDAC /* MoreBadgesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A794365B1E8ADF7C0046FDAC /* MoreBadgesViewController.swift */; };
 		A794365E1E8AE3CE0046FDAC /* GetPointsChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A794365D1E8AE3CE0046FDAC /* GetPointsChallengeViewController.swift */; };
+		A79A40B11E959B7C00190A71 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79A40B01E959B7C00190A71 /* RegisterViewController.swift */; };
+		A79A40B31E95BA4000190A71 /* QrViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79A40B21E95BA4000190A71 /* QrViewController.swift */; };
 		A79A4E011E7F702300B5CBD5 /* ConfigureInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79A4E001E7F702300B5CBD5 /* ConfigureInterface.swift */; };
 		A7B09F941E8565DB0005AB89 /* ChallengesProfileAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B09F931E8565DB0005AB89 /* ChallengesProfileAttribute.swift */; };
 		A7B09F9A1E8568800005AB89 /* ProfileDynamicAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B09F991E8568800005AB89 /* ProfileDynamicAttribute.swift */; };
@@ -123,6 +126,7 @@
 		425382D657DCFCAD4D48CDA2 /* Pods_AffinityIos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AffinityIos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5361110BAE5381E641C0D0E8 /* Pods_AffinityIosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AffinityIosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		60A86439D0CFD07A22C91D12 /* Pods_AffinityIosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AffinityIosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A76ECFDD1E98095D00DCE574 /* EditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		A776974D1E87586200F5A40A /* RewardCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RewardCollectionViewCell.swift; sourceTree = "<group>"; };
 		A776974F1E87587600F5A40A /* RedeemCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedeemCollectionViewCell.swift; sourceTree = "<group>"; };
 		A77697511E87589400F5A40A /* RewardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RewardViewController.swift; sourceTree = "<group>"; };
@@ -185,6 +189,8 @@
 		A79436591E8AC22E0046FDAC /* DetailPromotionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailPromotionViewController.swift; sourceTree = "<group>"; };
 		A794365B1E8ADF7C0046FDAC /* MoreBadgesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreBadgesViewController.swift; sourceTree = "<group>"; };
 		A794365D1E8AE3CE0046FDAC /* GetPointsChallengeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetPointsChallengeViewController.swift; sourceTree = "<group>"; };
+		A79A40B01E959B7C00190A71 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		A79A40B21E95BA4000190A71 /* QrViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QrViewController.swift; sourceTree = "<group>"; };
 		A79A4E001E7F702300B5CBD5 /* ConfigureInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigureInterface.swift; sourceTree = "<group>"; };
 		A7B09F931E8565DB0005AB89 /* ChallengesProfileAttribute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengesProfileAttribute.swift; sourceTree = "<group>"; };
 		A7B09F991E8568800005AB89 /* ProfileDynamicAttribute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileDynamicAttribute.swift; sourceTree = "<group>"; };
@@ -557,6 +563,8 @@
 				A7C8F9371E895AB400389A39 /* ProfileViewController.swift */,
 				A79436531E8AAD6B0046FDAC /* BalancePointsViewController.swift */,
 				A794365B1E8ADF7C0046FDAC /* MoreBadgesViewController.swift */,
+				A79A40B01E959B7C00190A71 /* RegisterViewController.swift */,
+				A76ECFDD1E98095D00DCE574 /* EditProfileViewController.swift */,
 			);
 			name = Master;
 			sourceTree = "<group>";
@@ -568,6 +576,7 @@
 				A7E4F06A1E882BB600B4ED19 /* RewardDetailViewController.swift */,
 				A79436591E8AC22E0046FDAC /* DetailPromotionViewController.swift */,
 				A794365D1E8AE3CE0046FDAC /* GetPointsChallengeViewController.swift */,
+				A79A40B21E95BA4000190A71 /* QrViewController.swift */,
 			);
 			name = Detail;
 			sourceTree = "<group>";
@@ -678,6 +687,11 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = DVLAV5F3R5;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.SafariKeychain = {
+								enabled = 0;
+							};
+						};
 					};
 					A7B6568E1E7CD86D005FB166 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -891,6 +905,7 @@
 				A7B09F9C1E8569090005AB89 /* ProfileIdentificationIndicator.swift in Sources */,
 				A77AC3541E8D9DCD0091D1FC /* Top.swift in Sources */,
 				A77AC35A1E8DBAD50091D1FC /* RadioButton.swift in Sources */,
+				A79A40B31E95BA4000190A71 /* QrViewController.swift in Sources */,
 				A7B09FBD1E857B6D0005AB89 /* DetailChallengeViewController.swift in Sources */,
 				A7B656811E7CD86D005FB166 /* ViewController.swift in Sources */,
 				A794365A1E8AC22E0046FDAC /* DetailPromotionViewController.swift in Sources */,
@@ -926,8 +941,10 @@
 				A78331DF1E7EF526001CFD39 /* ProductCategory.swift in Sources */,
 				A7B09FAE1E8571C40005AB89 /* ChallengeSurveyAnswer.swift in Sources */,
 				A783648B1E80413D00911A3B /* StoresViewController.swift in Sources */,
+				A76ECFDE1E98095D00DCE574 /* EditProfileViewController.swift in Sources */,
 				A7B09F9E1E85695C0005AB89 /* ProfileMemberType.swift in Sources */,
 				A7B09F941E8565DB0005AB89 /* ChallengesProfileAttribute.swift in Sources */,
+				A79A40B11E959B7C00190A71 /* RegisterViewController.swift in Sources */,
 				A7B09FA41E8569E30005AB89 /* ChallengesSeeContentAnswer.swift in Sources */,
 				A78C0D791E81B052001FBC01 /* HomeViewController.swift in Sources */,
 				A78331DD1E7EF495001CFD39 /* ProductSubcategory.swift in Sources */,
@@ -1109,6 +1126,7 @@
 			baseConfigurationReference = E29700408101BA754B14DD81 /* Pods-AffinityIos.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = DVLAV5F3R5;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1118,7 +1136,7 @@
 				INFOPLIST_FILE = AffinityIos/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = FlechaRojaTechnologies.AffinityIos;
+				PRODUCT_BUNDLE_IDENTIFIER = com.FlechaRojaTechnologies.AffinityIos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "AffinityIos-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
@@ -1130,6 +1148,7 @@
 			baseConfigurationReference = 339BD38FC1C28F10FEE6AC60 /* Pods-AffinityIos.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = DVLAV5F3R5;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1139,7 +1158,7 @@
 				INFOPLIST_FILE = AffinityIos/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = FlechaRojaTechnologies.AffinityIos;
+				PRODUCT_BUNDLE_IDENTIFIER = com.FlechaRojaTechnologies.AffinityIos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "AffinityIos-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;

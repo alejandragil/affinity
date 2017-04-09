@@ -26,7 +26,7 @@ extension AppDelegate: UIApplicationDelegate {
         if (isKeyPresentInUserDefaults())
         {
             let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let initialViewControlleripad : ProfileViewController = mainStoryboardIpad.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
+            let initialViewControlleripad : HomeViewController = mainStoryboardIpad.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
             self.window = UIWindow(frame: UIScreen.main.bounds)
             self.window?.rootViewController = initialViewControlleripad
             self.window?.makeKeyAndVisible()

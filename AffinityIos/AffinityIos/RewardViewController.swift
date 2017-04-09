@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class RewardViewController: UIViewController , UICollectionViewDelegate, UICollectionViewDataSource{
+class RewardViewController: UIViewController , UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     var mission = [Reward]()
    // let kResponsiveCollectionViewCellImageTag = 1
     let kResponsiveCollectionSizeProportion = 1.0 // width/height (equal in this case)
@@ -32,10 +32,20 @@ class RewardViewController: UIViewController , UICollectionViewDelegate, UIColle
         buttonConnect1.setImage(UIImage(named: "Back"), for: UIControlState.normal)
         buttonConnect1.addTarget(self, action: #selector(backAction(sender:)), for: .touchUpInside)
         viewHome.addSubview(buttonConnect1)
+        let leftAndRightPaddings: CGFloat = 5.0
+        let numberOfItemsPerRow: CGFloat = 2.0
+        
+        let bounds = UIScreen.main.bounds
+        let width = (bounds.size.width - leftAndRightPaddings*(numberOfItemsPerRow+1)) / numberOfItemsPerRow
+        let layout = collectionView
+            .collectionViewLayout as! UICollectionViewFlowLayout
+        layout.itemSize = CGSize(width: width, height:width)
         service()
        
         // Do any additional setup after loading the view.
     }
+    
+   
     
     func backAction(sender: UIButton!){
         dismiss(animated: true, completion: nil)
@@ -72,13 +82,7 @@ class RewardViewController: UIViewController , UICollectionViewDelegate, UIColle
         let mainNavigationController = self.storyboard?.instantiateViewController(withIdentifier: "RewardDetailViewController") as! RewardDetailViewController
         mainNavigationController.detail = mission[indexPath.row]
         self.present(mainNavigationController, animated: true, completion: nil)
-    }
-    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
-        print("-----------"+String( Int(round(Double(mission.count/2)))))
-        return Int(round(Double(mission.count/2)))//row number
-    }
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2 //each row have 15 columns
+        
     }
     
     private func service(){

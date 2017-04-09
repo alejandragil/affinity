@@ -12,20 +12,37 @@ import Alamofire
 import SwiftyJSON
 
 class StoresViewController: UIViewController , UITableViewDelegate, UITableViewDataSource{
- var colour = 1
     var mission = [Store]()
     @IBOutlet weak var tableView: UITableView!
      let configureInterface = ConfigureInterface()
-     @IBOutlet var viewHome: UIView!
-     let color = UIColor(red:1.00, green:1.00, blue:1.00, alpha:1.0)
+   
      let strings = Strings()
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.center = CGPoint(x: view.bounds.midX, y: tableView.center.y)
+        tableView.autoresizingMask = [UIViewAutoresizing.flexibleLeftMargin, UIViewAutoresizing.flexibleRightMargin, UIViewAutoresizing.flexibleTopMargin, UIViewAutoresizing.flexibleBottomMargin]
+        assignbackground()
         service()
-        let buttonConnect1 = configureInterface.generateButtonImage(x: 10, y: 20, width: 20, height: 20, colorBackground: color, colorBorder: color, tittle: "", tag: 300)
+        let buttonConnect1 = configureInterface.generateButtonImage(x: 10, y: 20, width: 20, height: 20, colorBackground: UIColor.clear, colorBorder: UIColor.clear, tittle: "", tag: 300)
         buttonConnect1.setImage(UIImage(named: "Back"), for: UIControlState.normal)
         buttonConnect1.addTarget(self, action: #selector(backAction(sender:)), for: .touchUpInside)
-        viewHome.addSubview(buttonConnect1)
+        view.addSubview(buttonConnect1)
+        
+    }
+    
+    func assignbackground(){
+        let background = UIImage(named: "Gradient_Blue")
+        
+        var imageView : UIImageView!
+        imageView = UIImageView(frame: view.bounds)
+        imageView.contentMode =  UIViewContentMode.scaleAspectFill
+        imageView.clipsToBounds = true
+        imageView.image = background
+        imageView.center = view.center
+        view.addSubview(imageView)
+        tableView.backgroundColor = UIColor(white: 1, alpha: 0.3)
+        self.view.sendSubview(toBack: imageView)
+        
     }
     
     func backAction(sender: UIButton!){
@@ -68,6 +85,7 @@ class StoresViewController: UIViewController , UITableViewDelegate, UITableViewD
         cell.direccionS.text = mission[indexPath.row].direccion
         cell.horarioS.text = mission[indexPath.row].horarioAtencion
         cell.paisS.text = mission[indexPath.row].indDirPais
+        cell.backgroundColor = UIColor.clear
         return cell
     }
     

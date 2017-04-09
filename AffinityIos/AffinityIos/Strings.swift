@@ -31,6 +31,7 @@ class Strings {
     let store = "v0/ubicacion"
     let productsSubCategory = "v0/producto/categoria/{idSubcategoria}/productos"
     let completeMission = "v0/mision/{idMision}/completar"
+    let register = "v0/admin/registro"
     //Promotion
     let ACTION_TYPE_URL = "A";
     let ACTION_TYPE_QR_CODE = "B";

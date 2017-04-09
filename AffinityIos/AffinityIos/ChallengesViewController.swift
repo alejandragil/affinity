@@ -26,12 +26,28 @@ class ChallengesViewController: UIViewController , UITableViewDelegate, UITableV
         tableView.center = CGPoint(x: viewHome.bounds.midX, y: tableView.center.y)
         tableView.autoresizingMask = [UIViewAutoresizing.flexibleLeftMargin, UIViewAutoresizing.flexibleRightMargin, UIViewAutoresizing.flexibleTopMargin, UIViewAutoresizing.flexibleBottomMargin]
        
-        let buttonConnect1 = configureInterface.generateButtonImage(x: 10, y: 20, width: 20, height: 20, colorBackground: color, colorBorder: color, tittle: "", tag: 300)
+        let buttonConnect1 = configureInterface.generateButtonImage(x: 10, y: 20, width: 20, height: 20, colorBackground: UIColor.clear, colorBorder: UIColor.clear, tittle: "", tag: 300)
         buttonConnect1.setImage(UIImage(named: "Back"), for: UIControlState.normal)
         buttonConnect1.addTarget(self, action: #selector(backAction(sender:)), for: .touchUpInside)
         viewHome.addSubview(buttonConnect1)
+        assignbackground()
     }
     
+    func assignbackground(){
+        let background = UIImage(named: "Gradient_Blue")
+        
+        var imageView : UIImageView!
+        imageView = UIImageView(frame: view.bounds)
+        imageView.contentMode =  UIViewContentMode.scaleAspectFill
+        imageView.clipsToBounds = true
+        imageView.image = background
+        imageView.center = view.center
+        view.addSubview(imageView)
+        tableView.backgroundColor = UIColor(white: 1, alpha: 0.3)
+        self.view.sendSubview(toBack: imageView)
+        
+    }
+
     func backAction(sender: UIButton!){
         dismiss(animated: true, completion: nil)
     }
@@ -49,8 +65,11 @@ class ChallengesViewController: UIViewController , UITableViewDelegate, UITableV
         cell.header?.text = mission[indexPath.row].encabezadoArte
         cell.subHeader.text = mission[indexPath.row].detalleArte
         cell.desc.text = String(mission[indexPath.row].cantMetrica)+" "+(mission[indexPath.row].metrica.nombre).lowercased()
+        cell.backgroundColor = UIColor(white: 1, alpha: 0.3)
         let url:String = mission[indexPath.row].imagenArte
         cell.imageChallenge.af_setImage(withURL: NSURL(string: url) as! URL)
+        cell.imageChallenge.layer.cornerRadius = 0.5 * cell.imageChallenge.bounds.size.width
+        cell.imageChallenge.clipsToBounds = true
         //row = indexPath.row
         return cell
     }
@@ -100,6 +119,17 @@ class ChallengesViewController: UIViewController , UITableViewDelegate, UITableV
                     metric.medida = metricObject["medida"].stringValue
                     object.metrica = metric
                     
+                    //Mision social
+                    let misionRedSocial = aObject["misionRedSocial"]
+                    let objectMision = ChallengeSocialNetwork()
+                    objectMision.indTipo = misionRedSocial["indTipo"].stringValue
+                    objectMision.mensaje = misionRedSocial["mensaje"].stringValue
+                    objectMision.tituloUrl = misionRedSocial["tituloUrl"].stringValue
+                    objectMision.urlImagen = misionRedSocial["urlImagen"].stringValue
+                    objectMision.urlObjectivo = misionRedSocial["urlObjectivo"].stringValue
+                    object.misionRedSocial = objectMision
+                    print(misionRedSocial)
+                    
                     //Recorre el array mision perfil atributos
                     let misionPerfilAtributos = aObject["misionPerfilAtributos"]
                     if(!misionPerfilAtributos.isEmpty && misionPerfilAtributos != nil){
@@ -121,7 +151,6 @@ class ChallengesViewController: UIViewController , UITableViewDelegate, UITableV
                         videoContent.texto = misionVerContenido["texto"].stringValue
                         videoContent.url = misionVerContenido["url"].stringValue
                         object.misionVerContenido = videoContent
-                        print("IM IN")
                     }
 
                     //Recorre el array de misionEncuestaPreguntas

@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>592387865176-08sdu1el90qnueoulicqsdfe3rritlai.apps.googleusercontent.com</string>
+	<string>592387865176-1k1q61rt12gd7idk0sh1e55g0p5tnd84.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.592387865176-08sdu1el90qnueoulicqsdfe3rritlai</string>
+	<string>com.googleusercontent.apps.592387865176-1k1q61rt12gd7idk0sh1e55g0p5tnd84</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>FlechaRojaTechnologies.AffinityIos</string>
+	<string>com.FlechaRojaTechnologies.AffinityIos</string>
 	<key>PROJECT_ID</key>
 	<string>affinityios</string>
 	<key>IS_ADS_ENABLED</key>
@@ -23,6 +23,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:592387865176:ios:77642d07f36ac5ed</string>
+	<string>1:592387865176:ios:3e06f10c31334ec3</string>
 </dict>
 </plist>
